@@ -1,7 +1,4 @@
-const BASE_URL = 'https://pixabay.com/api/';
-const URL_KEY = '?key=14134872-e022301753fdb280678fa084b';
-const IMAGE_TYPE = '&image_type=photo';
-const ORIENTAL = '&oriental=horizontal';
+import contants from '../constants';
 
 const fetchCards = (query = '', numberPage = 1, itemsPerPage = 12) => {
   const PER_PAGE = `per_page=${itemsPerPage}`;
@@ -9,11 +6,11 @@ const fetchCards = (query = '', numberPage = 1, itemsPerPage = 12) => {
   const QUERY = `&q=${query}`;
   return (
     fetch(
-      BASE_URL +
-        URL_KEY +
+      contants.BASE_URL +
+        contants.URL_KEY +
         QUERY +
-        IMAGE_TYPE +
-        ORIENTAL +
+        contants.IMAGE_TYPE +
+        contants.ORIENTAL +
         CURRENT_PAGE +
         PER_PAGE,
     )

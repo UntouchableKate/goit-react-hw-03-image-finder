@@ -1,7 +1,7 @@
 import contants from '../constants';
 
 const fetchCards = (query = '', numberPage = 1, itemsPerPage = 12) => {
-  const PER_PAGE = `per_page=${itemsPerPage}`;
+  const PER_PAGE = `&per_page=${itemsPerPage}`;
   const CURRENT_PAGE = `&page=${numberPage}`;
   const QUERY = `&q=${query}`;
   return (
